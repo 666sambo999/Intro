@@ -49,26 +49,72 @@ namespace Intro
             //Console.WriteLine(last_name + " " + first_name); 
             #endregion
 
-            Console.WriteLine(Boolean.TrueString); // логический тип данных
-            Console.WriteLine(Boolean.FalseString);
-            Console.WriteLine(sizeof(bool));
-            Console.Write( "CHAR: ");
-            Console.WriteLine(sizeof(char));// Unicode (UTF-16)
-            Console.WriteLine(Convert.ToInt32(Char.MaxValue));
-            Console.WriteLine(Convert.ToInt32(Char.MinValue));
+            #region DATA_TYPES
 
-            Console.WriteLine( "------------------Numeric Types------------------------" );
-            Console.WriteLine( "SHORT: ");
-            short a =  - 2;
-            ushort b = 3;
-            Console.WriteLine(sizeof(short));
-            Console.WriteLine(short.MinValue + " " + short.MaxValue);
+            //Console.WriteLine(Boolean.TrueString); // логический тип данных
+            //Console.WriteLine(Boolean.FalseString);
+            //Console.WriteLine(sizeof(bool));
+            //Console.Write("CHAR: ");
+            //Console.WriteLine(sizeof(char));// Unicode (UTF-16)
+            //Console.WriteLine(Convert.ToInt32(Char.MaxValue));
+            //Console.WriteLine(Convert.ToInt32(Char.MinValue));
 
-            Console.WriteLine($"переменная типа short  занимает {sizeof(short)} байта памяти, и принимает значения в диапазоне  от {short.MinValue} до {short.MaxValue}");
-            Console.WriteLine($"переменная типа ushort  занимает {sizeof(ushort)} байта памяти, и принимает значения в диапазоне  от {ushort.MinValue} до {ushort.MaxValue}");
-            Console.WriteLine($"переменная типа char  занимает {sizeof(char)} байта памяти, и принимает значения в диапазоне  от {char.MinValue} до {char.MaxValue}");
-            Console.WriteLine($"переменная типа int  занимает {sizeof(int)} байта памяти, и принимает значения в диапазоне  от {int.MinValue} до {int.MaxValue}");
-            Console.WriteLine($"переменная типа double  занимает {sizeof(double)} байта памяти, и принимает значения в диапазоне  от {double.MinValue} до {double.MaxValue}");
+            //Console.WriteLine("------------------Numeric Types------------------------");
+            //Console.WriteLine("SHORT: ");
+            //short a = -2;
+            //ushort b = 3;
+            //Console.WriteLine(sizeof(short));
+            //Console.WriteLine(short.MinValue + " " + short.MaxValue);
+
+            //Console.WriteLine($"переменная типа short  занимает {sizeof(short)} байта памяти, и принимает значения в диапазоне  от {short.MinValue} до {short.MaxValue}");
+            //Console.WriteLine($"переменная типа ushort  занимает {sizeof(ushort)} байта памяти, и принимает значения в диапазоне  от {ushort.MinValue} до {ushort.MaxValue}");
+            //Console.WriteLine($"переменная типа char  занимает {sizeof(char)} байта памяти, и принимает значения в диапазоне  от {char.MinValue} до {char.MaxValue}");
+            //Console.WriteLine($"переменная типа int  занимает {sizeof(int)} байта памяти, и принимает значения в диапазоне  от {int.MinValue} до {int.MaxValue}");
+            //Console.WriteLine($"переменная типа double  занимает {sizeof(double)} байта памяти, и принимает значения в диапазоне  от {double.MinValue} до {double.MaxValue}");
+            //Console.WriteLine($"переменная типа decimal  занимает {sizeof(decimal)} байта памяти, и принимает значения в диапазоне  от {decimal.MinValue} до {decimal.MaxValue}");
+            //Console.WriteLine($"переменная типа long  занимает {sizeof(long)} байта памяти, и принимает значения в диапазоне  от {long.MinValue} до {long.MaxValue}");
+
+            #endregion
+
+
+            #region TYPES_CONVERSION
+
+            //int a = 2;
+            //uint b = 3;
+            //a = (int)b;
+            //Console.WriteLine(a);
+            //double c = 5.2;
+            //a = (int)c;
+            //Console.WriteLine(a);
+            //bool day = true;
+            //Console.WriteLine(Convert.ToInt32(day));
+            //double d = a;
+            //Console.WriteLine(d);
+
+            #endregion TYPES_CONVERSION
+
+
+            #region LITHERALS
+            /*
+               Console.WriteLine((5l).GetType());
+               Console.WriteLine((5.2).GetType());
+               Console.WriteLine((5.2m).GetType());
+               Console.WriteLine(5e-2);
+
+
+               decimal dividend = Decimal.One;
+               decimal divisor = 3;
+               // The following displays 0.9999999999999999999999999999 to the console
+               Console.WriteLine(Math.Round(dividend / divisor * divisor));
+               */
+            #endregion
+
+
+            int i = 3;
+
+            i = ++i + ++i;
+            Console.ReadKey(i);
+            Console.WriteLine(i);
 
         }
     }
