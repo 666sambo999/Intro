@@ -2,6 +2,7 @@
 using Microsoft.Win32.SafeHandles;
 using System.ComponentModel;
 using System.Data;
+using System.Timers;
 
 namespace Tacks
 {
@@ -59,12 +60,88 @@ namespace Tacks
             //Console.WriteLine($"{money} рублей "); 
             #endregion
 
-            double S = 67;
-            double fuel = 8.5; 
-            double money = 7.6;
 
-            decimal sum = (decimal) (((S+S)/ 100 * fuel)*money);
-            Console.WriteLine($"{sum} рублей ");
+            #region #5 
+
+            //double S = 67;
+            //double fuel = 8.5;
+            //double money = 7.6;
+
+            //decimal sum = (decimal)(((S + S) / 100 * fuel) * money);
+
+            //Console.WriteLine($"{sum} рублей ");
+
+            #endregion
+
+            #region №6
+            // Задача №6;
+
+            //Console.Write("Введите выражение: ");
+            //string expression = Console.ReadLine();  // Читает строку с клавиатуры 
+            //expression = expression.Replace('.', ','); // Replace - заменяет первый символ вторым символом.Те точку на запятую
+            //String[] values = expression.Split(new char[] { '+', '-', '*', '/' }); // Метод Split - разделяет строку на подстроки по указанным разделителям
+            // Split - принимает массив char  в котором есть разделители и возвращает массив строк (токенов)
+            // Split не изменяет исходную строку 
+            //for (int i = 0; i< values.Length; i++)
+            //{
+            //    Console.WriteLine(values[i]);
+            //}
+
+            //double a = Convert.ToDouble(values[0]);
+            //double b = Convert.ToDouble(values[1]);
+            // Метод Contains проверяет содержит ли исходная строка указанную подстроку  
+            //if (expression.Contains("+")) Console.WriteLine($"{a} + {b}= {a + b}");
+            //else if (expression.Contains("-")) Console.WriteLine($"{a}-{b}={a - b}");
+            //else if (expression.Contains("*")) Console.WriteLine($"{a}*{b} = {a * b}");
+            //else if (expression.Contains("/")) Console.WriteLine($"{a}/{b} = {a / b}");
+            //Console.WriteLine(" No operation"); 
+            #endregion
+
+            // Задание №7
+
+            #region Shooter
+            //ConsoleKey key;
+            //do
+            //{
+            //    key = Console.ReadKey(true).Key;
+
+            //    switch (key)
+            //    {
+            //        case ConsoleKey.W: Console.WriteLine("Вперед"); break;
+            //        case ConsoleKey.S: Console.WriteLine("Назад"); break;
+            //        case ConsoleKey.A: Console.WriteLine("Влево"); break;
+            //        case ConsoleKey.D: Console.WriteLine("Вправо"); break;
+            //        case ConsoleKey.Spacebar: Console.WriteLine("Прыжок"); break;
+            //        case ConsoleKey.Enter: Console.WriteLine("Огонь"); break;
+            //        default: Console.WriteLine("Error"); break;
+            //    }
+            //    Console.Beep(60, 500);
+            //} while (key != ConsoleKey.Escape); 
+            #endregion
+
+
+            // Задание №8 
+
+            Console.CursorTop = 10;
+            Console.CursorLeft = 10;
+            Console.CursorVisible = false;
+            ConsoleKey key;
+            do
+            {
+                key = Console.ReadKey(true).Key;
+                switch (key)
+                {
+                    case ConsoleKey.W: Console.CursorTop++; break;
+                    case ConsoleKey.S: Console.CursorTop--; break;
+                    case ConsoleKey.A: Console.CursorLeft--; break;
+                    case ConsoleKey.D: Console.CursorLeft++; break;
+                    default: Console.Beep(); break;
+
+                }
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine(" ");
+                Console.BackgroundColor = ConsoleColor.Black;
+            } while (key != ConsoleKey.Escape);
 
 
         }
