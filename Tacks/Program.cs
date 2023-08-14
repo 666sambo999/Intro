@@ -174,8 +174,6 @@ namespace Tacks
                 }
             } while (key != ConsoleKey.Escape);
 
-
-
             //ConsoleKey key;
             //int x = 20, y = 20;
             //do
