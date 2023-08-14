@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Arrays
 {
@@ -16,65 +17,214 @@ namespace Arrays
             // type[] name = new type [size] {init_valyes};
 
 
-            Console.Write("Введите размер массива:");
-            int n = Convert.ToInt32(Console.ReadLine());
+            #region Arrays
+            // Console.Write("введите размер массива:");
+            // int n = Convert.ToInt32(Console.ReadLine());
 
-            //int[] arr = new int[] { 5, 6, 7, 8, 10 };
-            int[] arr = new int[n];
-            // заполнения массива случайными числами 
-            // 1) создаем объект класса Random 
-            //Random random = new Random(0);// уникальное число одиниковые 
-            Random random = new Random(); 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = random.Next(30, 300);
-            }
-            // Вывод массива на экран: 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + "\t");
-            }
-            Console.WriteLine();
-            // Сумма 
+            // int[] arr = new int[] { 5, 6, 7, 8, 10 };
+            // //int[] arr = new int[n];
+            // //заполнения массива случайными числами
+            // // 1) создаем объект класса random
+            // Random random = new Random(0);// уникальное число одиниковые 
+            // //Random random = new Random();
+            // for (int i = 0; i < arr.Length; i++)
+            // {
+            //     arr[i] = random.Next(30, 300);
+            // }
+            //// вывод массива на экран: 
+            //  for (int i = 0; i < arr.Length; i++)
+            // {
+            //     Console.Write(arr[i] + "\t");
+            // }
+            // Console.WriteLine();
+            // //сумма
+            // int sum = 0;
+            // for (int i = 0; i < arr.Length; i++)
+            // {
+            //     sum += arr[i];
+            // }
+
+            // //средне - арифметическое
+            // int avg = 0;
+            // for (int i = 0; i < arr.Length; i++)
+            // {
+            //     avg = sum / n;
+            // }
+            // Console.WriteLine(avg);
+
+            // //минимальное
+
+            // for (int i = 0; i < arr.Length; i++)
+            // {
+            //     if (arr[i] > int.MinValue) arr[i] = int.MaxValue;
+            // }
+            // Console.WriteLine(arr);
+
+
+            // Console.WriteLine($" сумма элементов массива: {arr.Sum()}");
+            // Console.WriteLine($" средне-арифметическое значение элементов: {arr.Average()}");
+            // Console.WriteLine($" минимальное значение элемента: {arr.Min()}");
+            // Console.WriteLine($" максимальное значение элемента: {arr.Max()}");
+
+            // Array.Sort(arr);
+            // // сортировка массива 
+            // foreach (int i in arr)
+            // {
+            //     Console.Write(i + "\t");
+            // }
+            // Console.WriteLine();
+
+            // arr = arr.Concat(new int[] { 100 }).ToArray();
+            // foreach (int i in arr) { Console.Write(i + "\t"); }
+            // Console.WriteLine();
+            #endregion
+
+
+
+
+
+            #region Arrays2
+            //// Двумерные массивы 
+
+            ////Console.Write("Введите количество строк: ");
+            ////int rows = Convert.ToInt32(Console.ReadLine());
+            ////Console.Write("Введите количество элементов строк: ");
+            ////int cols = Convert.ToInt32(Console.ReadLine()); 
+            ////int[,] i_arr_2 = new int[rows, cols];
+            //// 2 вариант 
+            //int[,] i_arr_2 = new int[,]
+            //{
+            //       {1,2,3 },
+            //       {4,5,6 },
+            //       {7,8,9},
+            //};
+
+            //Console.WriteLine(i_arr_2.Length);
+            //Console.WriteLine(i_arr_2.Rank);
+            //Console.WriteLine(i_arr_2.GetLength(0));
+            //Console.WriteLine(i_arr_2.GetLength(1));
+            //Random rand = new Random(0);
+            ////for (int i = 0; i < i_arr_2.GetLength(0); i++)
+            ////{
+            ////    for (int j = 0; j < i_arr_2.GetLength(1); j++)
+            ////    {
+            ////        i_arr_2[i, j] = rand.Next(100);
+            ////    }
+            ////}
+
+            //for (int i = 0; i < i_arr_2.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < i_arr_2.GetLength(1); j++)
+            //    {
+            //        Console.Write(i_arr_2[i, j] + "\t");
+            //    }
+            //    Console.WriteLine();
+            //}
+            //// Сумма элементов 
             //int sum = 0;
-            //for (int i = 0; i < arr.Length; i++)
+            //for (int i = 0; i < i_arr_2.GetLength(0); i++)
             //{
-            //    sum += arr[i];
+            //    for (int j = 0; j < i_arr_2.GetLength(1); j++)
+            //    {
+            //        sum += i_arr_2[i, j];
+            //    }
+            //}
+            //Console.WriteLine($"Сумма элементов массива: {sum}");
+            //foreach (int i in i_arr_2)
+            //{
+            //    Console.Write(i + "\t");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine($"Сумма элементов массива {i_arr_2.Cast<int>().Sum()}");
+            //Console.WriteLine($"Средне-арифметическое значение элементов массива {i_arr_2.Cast<int>().Average()}");
+            //Console.WriteLine($"Минимальное значение элементов массива {i_arr_2.Cast<int>().Min()}");
+            //Console.WriteLine($"Максимальное значение элементов массива {i_arr_2.Cast<int>().Max()}");
+
+            //// Коллекции в с# = контейнер в с++; 
+            #endregion
+
+            #region Ragged_Arrays
+
+            // Рваные массивы 
+
+            //Console.Write("Введите количество строк: ");
+            //int rows = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Введите количество элементов строк: ");
+            //int cols = Convert.ToInt32(Console.ReadLine());
+            //int[][] ragged_arr = new int[5][];  // объявляем массив указателей (ссылок)
+            //ragged_arr[0] = new int[] { 1, 2, 3, 4, 5 };
+            //ragged_arr[1] = new int[] { 5, 6, 7, 8, 9, };
+            //ragged_arr[2] = new int[] { 10, 11, 12, 14, 18 };
+            //ragged_arr[3] = new int[] { 17, 21, 29, 30, 94 };
+            //ragged_arr[4] = new int[] { 34, 67, 8, 30, 0};
+
+            //for (int i = 0; i < ragged_arr.Length; i++)
+            //{
+            //    ragged_arr[i] = new int[cols]; // одномерный массив 
+            //}
+            //Random rand = new Random(0);
+
+            //for (int i = 0; i < ragged_arr.Length; i++)
+            //{
+            //    for (int j = 0; j < ragged_arr[i].Length; j++)
+            //    {
+            //        ragged_arr[i][j] = rand.Next(100);
+            //    }
             //}
 
-            // Средне-арифметическое 
-            //int AVG = 0;
-            //for (int i = 0; i < arr.Length; i++)
+            //for (int i = 0; i < ragged_arr.Length; i++)
             //{
-            //    AVG = sum / n;
+            //    for (int j = 0; j < ragged_arr[i].Length; j++)
+            //    {
+            //        Console.Write(ragged_arr[i][j] + "\t");
+            //    }
+            //    Console.WriteLine();
             //}
-            //Console.WriteLine(AVG);
 
-            // Минимальное 
-
-            //for (int i =0; i<arr.Length; i++)
+            // for 
+            //foreach (int[] i in ragged_arr) // Итератор i перебирает массивы
             //{
-            //    if (arr[i] > int.MinValue) arr[i] = int.MaxValue;
-            //}
-            //Console.WriteLine(arr);
+            //    if (i!=null)
+            //    {
+            //        foreach (int j in i)         // итератор j перебирает элементы массива 
+            //        {
+            //            Console.Write(j + "\t");
+            //        } 
+            //    Console.WriteLine();
+            //    }
+            //    else 
+            //    { 
+            //        Console.WriteLine("Пустая строка"); 
+            //    }
+            //} 
+            #endregion
 
-            
-            Console.WriteLine($" Сумма элементов массива: {arr.Sum()}");
-            Console.WriteLine($" Средне-арифметическое значение элементов: {arr.Average()}");
-            Console.WriteLine($" Минимальное значение элемента: {arr.Min()}");
-            Console.WriteLine($" Максимальное значение элемента: {arr.Max()}");
+            Season season = Season.Winter;
+            Console.WriteLine(season);
 
-            Array.Sort(arr);
-            // сортировка массива 
-            foreach (int i in arr)
+            System.Enum.GetName(typeof(Week), Week.Monday);
+            foreach(Week i in System.Enum.GetValues(typeof(Week)).Cast<Week>())
             {
-                Console.Write(i + "\t");
+                Console.WriteLine(i);  
             }
-            Console.WriteLine();
 
-            arr = arr.Concat(new int[] { 100 }).ToArray();
-            foreach (int i in arr) { Console.Write(i + "\t");} Console.WriteLine();
 
         }
+        enum Season
+        {
+            Winter, Spring, Summer, Autumn
+        };
+        enum Week : uint
+        {
+            Sunday = 0,
+            Monday = 1,
+            Tuesday = 2,
+            Wednesday = 3,
+            Thursday = 4,
+            Friday = 5,
+            Saturday = 6,
+        };
+
+
     }
 }
