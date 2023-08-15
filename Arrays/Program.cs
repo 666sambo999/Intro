@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace Arrays
@@ -78,8 +79,6 @@ namespace Arrays
             // foreach (int i in arr) { Console.Write(i + "\t"); }
             // Console.WriteLine();
             #endregion
-
-
 
 
 
@@ -184,20 +183,55 @@ namespace Arrays
             // for 
             //foreach (int[] i in ragged_arr) // Итератор i перебирает массивы
             //{
-            //    if (i!=null)
+            //    if (i != null)
             //    {
             //        foreach (int j in i)         // итератор j перебирает элементы массива 
             //        {
             //            Console.Write(j + "\t");
-            //        } 
-            //    Console.WriteLine();
+            //        }
+            //        Console.WriteLine();
             //    }
-            //    else 
-            //    { 
-            //        Console.WriteLine("Пустая строка"); 
+            //    else
+            //    {
+            //        Console.WriteLine("Пустая строка");
             //    }
-            //} 
+            //}
+
+            // Sum - сумма
+            //int sum = 0;
+            //int count = 0;
+
+            //foreach (int[] i in ragged_arr)
+            //{
+            //    if (i != null)
+            //    {
+            //        sum += i.Sum();
+            //        count += i.Length;
+
+            //    }
+            //}
+            //Console.WriteLine($"Сумма элементов массива: {sum}");
+            //Console.WriteLine($"Средне-арифметическое элементов массива: {(double)sum / count}");
+            //int Min = 0;
+            //int Max = 0;
+            //for (int i = 0; i < ragged_arr.Length; i++)
+            //{
+            //    if (ragged_arr[i] != null)
+            //    {
+            //        for (int j = 0; j < ragged_arr[i].Length; j++)
+            //        {
+            //            if (Max < ragged_arr[i][j]) Max = ragged_arr[i][j];
+            //            if (Min > ragged_arr[i][j]) Min = ragged_arr[i][j];
+            //        }
+            //    }
+
+            //}
+            //Console.WriteLine($"Минимальное значение элементов массива: {Min}");
+            //Console.WriteLine($"Максимальное значение элементов массива: {Max}");
             #endregion
+
+
+            // перечисления 
 
             Season season = Season.Winter;
             Console.WriteLine(season);
@@ -207,9 +241,28 @@ namespace Arrays
             {
                 Console.WriteLine(i);  
             }
+            //Week day = Week.Monday;
+            //Console.WriteLine( day );
 
-
+            string [] dayName = Enum.GetNames(typeof(Week));
+            int[] dayNumbers = (int[])Enum.GetValues(typeof(Week));
+            for(int i=0; i< dayNumbers.Length;i++)
+            {
+                Console.WriteLine($"Name: {dayName[i]} \t = Value: {dayNumbers[i]}");
+            }
+            Console.WriteLine(delimeter);
+            string[] distName = Enum.GetNames(typeof(DistanceFromSun));
+            ulong[] distValue = (ulong[])Enum.GetValues(typeof(DistanceFromSun));
+            for (int i =0; i< distName.Length; i++)
+            {
+                Console.WriteLine($"Name: {distName[i]} \t  = {distValue[i]}");
+            }
+            Console.WriteLine(delimeter);
+            Console.WriteLine($" Type: {Enum.GetUnderlyingType(typeof(DistanceFromSun))}" );
+            //  double  тоже самое, меняется тип данных 
         }
+
+        const string delimeter = "\n----------------------------------\n"; 
         enum Season
         {
             Winter, Spring, Summer, Autumn
@@ -224,6 +277,20 @@ namespace Arrays
             Friday = 5,
             Saturday = 6,
         };
+        enum DistanceFromSun : ulong
+        { 
+            Sun =0,
+            Mercury = 579000000,
+            Venus = 1082000000,
+            Earth = 149600000,
+            Mars = 227900000,
+            Jupiter = 7783000000,
+            Saturn = 1427000000,
+            Uranus = 2870000000,
+            Neptune = 4496000000,
+            Pluto = 594600000
+        }
+
 
 
     }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Shack\Snake.csproj", "{79894D8C-8BEC-4716-8933-47BD723A494D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{4BE01850-9243-4E0A-9FE1-687F3503CE0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{79894D8C-8BEC-4716-8933-47BD723A494D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79894D8C-8BEC-4716-8933-47BD723A494D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79894D8C-8BEC-4716-8933-47BD723A494D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
