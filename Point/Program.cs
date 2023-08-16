@@ -40,7 +40,6 @@ namespace Point
                 return left.distance(right);
             }
 
-
         }
         
         // Heap 

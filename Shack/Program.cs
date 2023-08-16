@@ -13,13 +13,14 @@ namespace Snake
         static void Main(string[] args)
         {
             Console.Title = "Game Snake";
+
             Console.WindowHeight = 30;
             Console.WindowWidth = 40;
             int screenwidth = Console.WindowWidth;
             int screenheight = Console.WindowHeight;
             Random rand = new Random();
             int score = 5;
-            int gameover = 0;
+            int game_over = 0;
             pixel hoofd = new pixel();
             hoofd.xpos = screenwidth / 2;
             hoofd.ypos = screenheight / 2;
@@ -37,7 +38,7 @@ namespace Snake
                 Console.Clear();
                 if (hoofd.xpos == screenwidth - 1 || hoofd.xpos == 0 || hoofd.ypos == screenheight - 1 || hoofd.ypos == 0)
                 {
-                    gameover = 1;
+                    game_over = 1;
                 }
                 for (int i = 0; i < screenwidth; i++)
                 {
@@ -72,10 +73,10 @@ namespace Snake
                     Console.Write("■");
                     if (xposlijf[i] == hoofd.xpos && yposlijf[i] == hoofd.ypos)
                     {
-                        gameover = 1;
+                        game_over = 1;
                     }
                 }
-                if (gameover == 1)
+                if (game_over == 1)
                 {
                     break;
                 }

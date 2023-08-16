@@ -23,7 +23,6 @@ namespace TransferParametr
             b = buffer;
         }
 
-
         static void Main(string[] args)
         {
             int a, b;
