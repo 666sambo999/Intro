@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Shack\Snake.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{4BE01850-9243-4E0A-9FE1-687F3503CE0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferParametr", "TransferParametr\TransferParametr.csproj", "{F90E1670-3C13-46B5-B77A-406F5A8D572C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BE01850-9243-4E0A-9FE1-687F3503CE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F90E1670-3C13-46B5-B77A-406F5A8D572C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90E1670-3C13-46B5-B77A-406F5A8D572C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90E1670-3C13-46B5-B77A-406F5A8D572C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90E1670-3C13-46B5-B77A-406F5A8D572C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
