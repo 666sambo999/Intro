@@ -46,17 +46,17 @@ namespace Point
         static void Main(string[] args)
         {
             Console.WriteLine($" Количество точек: {Point.count}");
-            Point A;
-            A.x = 2;
-            A.y = 3;
-            A.print();
-            Point B = new Point(8, 9);
-            B.print();
+            //Point A;
+            //A.x = 2;
+            //A.y = 3;
+            //A.print();
+            //Point B = new Point(8, 9);
+            //B.print();
 
             Console.WriteLine($"Расстояние от точки А до точки В: {A.distance(B)}");
             Console.WriteLine($"Расстояние от точки B до точки A: {B.distance(A)}");
             Console.WriteLine($" Расстояние между точками *А* и *Б* {Point.distance(A,B)}");
-            Console.WriteLine($" Расстояние между точками *Б* и *А* {Point.distance(B, A)}");
+            Console.WriteLine($" Расстояние между точками *Б* и *А* {Point.distance(B,A)}");
 
             Console.WriteLine($" Расстояние между точками *A* и *B*: {Point.distance(new Point(22, 33), new Point(77, 88))}"); ;
             Console.WriteLine($" Расстояние между точками *b* и *a*: {new Point(88, 66).distance(new Point(22, 33))}"); 
