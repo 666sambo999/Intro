@@ -51,10 +51,10 @@ namespace ClassPoint
         {
             Console.WriteLine($" X = {X}\tY =  {Y}");
         }
-        public override string ToString() 
+        public override string ToString()
         {
-            //return base.ToString();
+            //return base.ToString(); //base - базовый класс
             return $" X = {X}\tY =  {Y}";
-        } // base - базовый класс
+        }           
     }
 }
